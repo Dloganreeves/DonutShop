@@ -1,0 +1,25 @@
+<h1>Donut <button (click)="AddtoCart()">Add to Cart</button></h1>
+<h2> <a routerLink="/Cart">Cart</a></h2>
+<h2><a routerLink="/Home">Home</a></h2>
+ <p>Name:{{donutExtraResult.name}}</p>
+ <br/>
+ <p>Calories:{{donutExtraResult.calories}}</p>
+ <br/>
+ <p>Extras:</p>
+ <ul>
+    @for(e of donutExtraResult.extras; track $index) {
+     <li>{{e}}</li>
+    }
+ </ul>
+
+ <br/>
+ <img [src]="donutExtraResult.photo">
+ <br/>
+<a [href]="donutExtraResult.photo_attribution">Photo attribution</a>
+
+
+   
+    
+
+
+

@@ -1,0 +1,18 @@
+<h1>Cart</h1>
+<h2><a routerLink="/Home">Home</a></h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Calories</th>
+        <th>remove?</th>
+    </tr>
+    @for(d of Cart; track $index) {
+        <tr>
+            <td>{{d.name}}</td>
+            <td>$1.00</td>
+            <td>{{d.calories}}</td>
+            <td> <button (click)="RemoveDonut(d)">Remove</button></td>
+        </tr>
+    }
+</table>
